@@ -195,8 +195,11 @@ class Items extends Database {
                 
         // only starred
         if(isset($options['type']) && $options['type']=='starred')
+	{
             $where .= ' AND starred=1 ';
-            
+	    $order = 'ASC';
+        }
+
         // only unread
         else if(isset($options['type']) && $options['type']=='unread'){
             $where .= ' AND unread=1 ';
