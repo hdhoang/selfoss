@@ -59,7 +59,7 @@ selfoss.events.entries = function(e) {
             selfoss.events.entriesToolbar(fullscreen);
 
             // set events for closing fullscreen
-            fullscreen.find('.entry, .entry-close').click(function(e) {
+            fullscreen.find('.entry-close').click(function(e) {
                 if(e.target.tagName.toLowerCase()=="a")
                     return;
                 if(autoHideReadOnMobile && ($('#entrr'+parent.attr('id').substr(5)).hasClass('unread')==false)) {
